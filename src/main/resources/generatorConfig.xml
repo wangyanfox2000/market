@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--数据库驱动：选择你的本地硬盘上面的数据库驱动包-->
+    <classPathEntry location="E:\ep\maven\mvn-repos\mysql\mysql-connector-java\8.0.19\mysql-connector-java-8.0.19.jar"/>
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <!--是否去除自动生成的注释 true:是 false:否-->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!--数据库链家URL，用户名，密码-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/supermarketssm"
+                        userId="root" password="123456789wy.">
+            <!--connectionURL属性 ,防止乱码-->
+            <property name="useUnicode" value="true"/>
+            <!--connectionURL属性 ,防止乱码-->
+            <property name="characterEncoding" value="utf-8"/>
+            <!--connectionURL属性 ,防止报时间错误-->
+            <property name="serverTimezone" value="UTC"/>
+            <!--connectionURL属性 ,防止生成不同数据库同名表的代码-->
+            <property name="nullCatalogMeansCurrent" value="true"/>
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <!--生成模型的包名与位置-->
+        <javaModelGenerator targetPackage="com.graduate.ssm.entity" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!--生成映射文件的包名与位置-->
+        <sqlMapGenerator targetPackage="com.graduate.ssm.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!--生成DAO的包名与位置-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.graduate.ssm.dao" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <!-- 指定数据库表  tableName是表名 domainObjectName是要生成的类名（大写首字母即可） 所有Example为dalse摒弃增删改查的冗余文件-->
+        <table tableName="sys_bill" domainObjectName="Sys_bill"
+               enableCountByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false"/>
+        <table tableName="sys_order" domainObjectName="Sys_order"
+               enableCountByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false"/>
+        <table tableName="sys_user" domainObjectName="Sys_user"
+               enableCountByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false"/>
+        <table tableName="sys_staff" domainObjectName="Sys_staff"
+               enableCountByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false"/>
+        <table tableName="sys_product" domainObjectName="Sys_product"
+               enableCountByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false"/>
+        <table tableName="sys_product_type" domainObjectName="Sys_product_type"
+               enableCountByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false"/>
+    </context>
+</generatorConfiguration>

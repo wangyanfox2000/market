@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:tx="http://www.springframework.org/schema/tx"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+                         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+                         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+                         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+                         ">
+
+    <!-- 1.扫描 service.impl层   -->
+    <context:component-scan base-package="com.graduate.ssm.service.Impl"></context:component-scan>
+
+
+    <!-- 2.读取 xxx.properties文件 -->
+    <context:property-placeholder location="classpath:config/*.properties"/>
+
+
+    <!-- 3. Spring和Mybatis整合用到的 SqlSessionFactory -->
+    <bean id="sqlSessionFactorty" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 注入数据源 -->
+        <property name="dataSource" ref="dataSource"></property>
+
+        <!-- 配置别名  把 com.zte.shopping.entity包取一个别名 -->
+        <property name="typeAliasesPackage" value="com.graduate.ssm.entity"></property>
+
+        <!-- 注册Mapper文件  所有XxxMapper.xml -->
+        <property name="mapperLocations">
+            <list>
+                <value>classpath:com/graduate/ssm/mapper/*Mapper.xml</value>
+            </list>
+        </property>
+
+        <!--  引入另一个xml文件  mybatis config.xml -->
+        <property name="configLocation" value="classpath:config/mybatis/mybatis-config.xml"></property>
+    </bean>
+
+
+    <!-- 4. 配置MapperScannerConfigurer -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.graduate.ssm.dao"></property>
+    </bean>
+
+
+    <!-- 5. 配置事务  先用注解式事务 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!-- 注入数据源 -->
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!-- 配合注解使用 -->
+    <tx:annotation-driven/>
+
+
+    <!-- 6. 数据源配置 要带连接池 Durid(阿里开发的) 德鲁伊  唯一一个带监控平台的连接池  -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <!-- 连接DB所需要的东西 -->
+        <property name="driverClassName" value="${jdbc.driverClassName}"></property>
+        <property name="url" value="${jdbc.url}"></property>
+        <property name="username" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </bean>
+
+
+</beans>

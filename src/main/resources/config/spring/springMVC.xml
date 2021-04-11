@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:mvc="http://www.springframework.org/schema/mvc"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+                           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd 
+                           http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd 
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+                          ">
+
+    <!--配置controll层文件扫描-->
+    <context:component-scan base-package="com.graduate.ssm.controller"/>
+
+    <!-- 1. 在web.xml配置文件中配置SpringMVC的心脏DispatcherServlet -->
+
+    <!-- 2. 配置HandlerMappering + HandlderAdapter -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/html;charset=UTF-8</value>
+                        <value>application/json</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!-- 3. 配置视图解析器 -->
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 项目中使用的  视图技术/模板引擎  是JSP(官方默认) 如果我们项目中只用了JSP 则此属性可以省略 -->
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+
+        <!-- 要访问的页面  /WEB-INF/jsp/xxx.jsp或使用views存放jsp视图文件-->
+        <!--  配置要访问页面的前缀   -->
+        <property name="prefix" value="/views/"></property>
+        <!-- 配置要访问页面的后缀 -->
+        <property name="suffix" value=".jsp"></property>
+    </bean>
+
+
+    <!-- SpringMVC对文件上传的支持 配置CommonsMultipartResolver -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--设置编码方式-->
+        <property name="defaultEncoding" value="utf-8"/>
+        <!--最大上传的尺寸   100m=1*100*1021*1024，最多上传100Md的文件-->
+        <property name="maxUploadSize" value="104887600"/>
+    </bean>
+
+    <!-- 4. 配置静态资源访问 xxx.js  xxx.css  图片 -->
+    <!-- <mvc:default-servlet-handler/>-->
+    <mvc:resources location="/statics/" mapping="/statics/**"/>
+
+</beans>

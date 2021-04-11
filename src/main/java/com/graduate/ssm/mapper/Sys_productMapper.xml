@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.graduate.ssm.dao.Sys_productMapper" >
+  <resultMap id="BaseResultMap" type="com.graduate.ssm.entity.Sys_product" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="no" property="no" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="selling_price" property="sellingPrice" jdbcType="DOUBLE" />
+    <result column="purchaseing_price" property="purchaseingPrice" jdbcType="DOUBLE" />
+    <result column="number" property="number" jdbcType="INTEGER" />
+    <result column="image" property="image" jdbcType="VARCHAR" />
+    <result column="product_type_id" property="productTypeId" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, no, name, selling_price, purchaseing_price, number, image, product_type_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_product
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_product
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.graduate.ssm.entity.Sys_product" >
+    insert into sys_product (id, no, name, 
+      selling_price, purchaseing_price, number, 
+      image, product_type_id)
+    values (#{id,jdbcType=INTEGER}, #{no,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{sellingPrice,jdbcType=DOUBLE}, #{purchaseingPrice,jdbcType=DOUBLE}, #{number,jdbcType=INTEGER}, 
+      #{image,jdbcType=VARCHAR}, #{productTypeId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.graduate.ssm.entity.Sys_product" >
+    insert into sys_product
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="no != null" >
+        no,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="sellingPrice != null" >
+        selling_price,
+      </if>
+      <if test="purchaseingPrice != null" >
+        purchaseing_price,
+      </if>
+      <if test="number != null" >
+        number,
+      </if>
+      <if test="image != null" >
+        image,
+      </if>
+      <if test="productTypeId != null" >
+        product_type_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="no != null" >
+        #{no,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="sellingPrice != null" >
+        #{sellingPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="purchaseingPrice != null" >
+        #{purchaseingPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="number != null" >
+        #{number,jdbcType=INTEGER},
+      </if>
+      <if test="image != null" >
+        #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="productTypeId != null" >
+        #{productTypeId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.graduate.ssm.entity.Sys_product" >
+    update sys_product
+    <set >
+      <if test="no != null" >
+        no = #{no,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="sellingPrice != null" >
+        selling_price = #{sellingPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="purchaseingPrice != null" >
+        purchaseing_price = #{purchaseingPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="number != null" >
+        number = #{number,jdbcType=INTEGER},
+      </if>
+      <if test="image != null" >
+        image = #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="productTypeId != null" >
+        product_type_id = #{productTypeId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.graduate.ssm.entity.Sys_product" >
+    update sys_product
+    set no = #{no,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      selling_price = #{sellingPrice,jdbcType=DOUBLE},
+      purchaseing_price = #{purchaseingPrice,jdbcType=DOUBLE},
+      number = #{number,jdbcType=INTEGER},
+      image = #{image,jdbcType=VARCHAR},
+      product_type_id = #{productTypeId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

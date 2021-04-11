@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+  <display-name>market_3</display-name>
+  <welcome-file-list>
+    <welcome-file>/index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <!-- 1.配置SpringMVC的  就是一个Servlet  前端控制器-->
+  <servlet>
+    <servlet-name>springMVC</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <!-- 4.配置自定义SpringMVC 核心配置文件路径 -->
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:config/spring/springMVC.xml</param-value>
+    </init-param>
+    <!-- 让Tomcat容器启动时  就初始化DispatcherServlet实例  -->
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>springMVC</servlet-name>
+    <!-- 只能配置/  表示拦截所有的请求 不包括JSP页面 -->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+
+  <!-- 2.配置字符编码过滤器,解决POST乱码问题 -->
+  <filter>
+    <filter-name>character</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <!-- 配置  局部的 初始化参数 -->
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>character</filter-name>
+    <!-- 只能配置/*  表示拦截所有的请求 -->
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+
+
+  <!-- 3.配置自定义Spring  核心配置文件路径   全局初始化参数 -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:config/spring/spring.xml</param-value>
+  </context-param>
+
+  <!-- 5. 配置Spring官方提供的监听器 -->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+</web-app>
