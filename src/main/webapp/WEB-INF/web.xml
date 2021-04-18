@@ -6,8 +6,17 @@
 
   <display-name>market_3</display-name>
   <welcome-file-list>
-    <welcome-file>/index.jsp</welcome-file>
+    <welcome-file>/WEB-INF/pages/index.jsp</welcome-file>
   </welcome-file-list>
+
+
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>*.js</url-pattern>
+    <url-pattern>*.css</url-pattern>
+    <url-pattern>*.png</url-pattern>
+    <url-pattern>*.jpg</url-pattern>
+  </servlet-mapping>
 
   <!-- 1.配置SpringMVC的  就是一个Servlet  前端控制器-->
   <servlet>
