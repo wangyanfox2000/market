@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.graduate.ssm.dao.Sys_orderMapper" >
+  <resultMap id="BaseResultMap" type="com.graduate.ssm.entity.Sys_order" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="order_no" property="orderNo" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DOUBLE" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="o_status" property="oStatus" jdbcType="INTEGER" />
+    <result column="register_date" property="registerDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, order_no, price, user_id, o_status, register_date
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_order
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_order
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.graduate.ssm.entity.Sys_order" >
+    insert into sys_order (id, order_no, price, 
+      user_id, o_status, register_date
+      )
+    values (#{id,jdbcType=INTEGER}, #{orderNo,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, 
+      #{userId,jdbcType=INTEGER}, #{oStatus,jdbcType=INTEGER}, #{registerDate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.graduate.ssm.entity.Sys_order" >
+    insert into sys_order
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="orderNo != null" >
+        order_no,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="oStatus != null" >
+        o_status,
+      </if>
+      <if test="registerDate != null" >
+        register_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="orderNo != null" >
+        #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="oStatus != null" >
+        #{oStatus,jdbcType=INTEGER},
+      </if>
+      <if test="registerDate != null" >
+        #{registerDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.graduate.ssm.entity.Sys_order" >
+    update sys_order
+    <set >
+      <if test="orderNo != null" >
+        order_no = #{orderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="oStatus != null" >
+        o_status = #{oStatus,jdbcType=INTEGER},
+      </if>
+      <if test="registerDate != null" >
+        register_date = #{registerDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.graduate.ssm.entity.Sys_order" >
+    update sys_order
+    set order_no = #{orderNo,jdbcType=VARCHAR},
+      price = #{price,jdbcType=DOUBLE},
+      user_id = #{userId,jdbcType=INTEGER},
+      o_status = #{oStatus,jdbcType=INTEGER},
+      register_date = #{registerDate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
