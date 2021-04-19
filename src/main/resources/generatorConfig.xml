@@ -59,7 +59,13 @@
                enableSelectByExample="false"
                enableUpdateByExample="false"
                selectByExampleQueryId="false"/>
-        <table tableName="sys_staff" domainObjectName="Sys_staff"
+        <table tableName="sys_cart" domainObjectName="Sys_cart"
+               enableCountByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false"/>
+        <table tableName="sys_admin" domainObjectName="Sys_admin"
                enableCountByExample="false"
                enableDeleteByExample="false"
                enableSelectByExample="false"
@@ -72,6 +78,18 @@
                enableUpdateByExample="false"
                selectByExampleQueryId="false"/>
         <table tableName="sys_product_type" domainObjectName="Sys_product_type"
+               enableCountByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false"/>
+        <table tableName="sys_input" domainObjectName="Sys_input"
+               enableCountByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               enableUpdateByExample="false"
+               selectByExampleQueryId="false"/>
+        <table tableName="sys_inputbill" domainObjectName="Sys_inputbill"
                enableCountByExample="false"
                enableDeleteByExample="false"
                enableSelectByExample="false"

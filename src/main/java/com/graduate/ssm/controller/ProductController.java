@@ -13,4 +13,8 @@ public class ProductController {
     public String go_product_info(){
         return "userViews/productdetail";
     }
+
+    //管理员界面-->商品列表
+    @RequestMapping(value = "/ptoductList.html")
+    public String goproductList(){return  "adminViews/product/productList";}
 }
