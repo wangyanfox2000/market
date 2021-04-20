@@ -43,7 +43,7 @@
                 <li><a href="${pageContext.request.contextPath}/inputbill/ibList.html">进货订单管理</a></li>
                 <li><a href="${pageContext.request.contextPath}/bill/billList.html">订单管理</a></li>
                 <li  id="active"><a href="${pageContext.request.contextPath}/userManager/userList.html">用户管理</a></li>
-                <li><a href="${pageContext.request.contextPath}/product/ptoductList.html">商品管理</a></li>
+                <li><a href="${pageContext.request.contextPath}/product/productList.html">商品管理</a></li>
                 <li><a href="${pageContext.request.contextPath}/admin/adminInfo.html">密码修改</a></li>
                 <li><a href="${pageContext.request.contextPath}/index/index.html">退出系统</a></li>
             </ul>

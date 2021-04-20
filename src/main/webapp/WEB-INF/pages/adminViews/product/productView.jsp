@@ -40,9 +40,9 @@
         <nav>
             <ul class="list">
                 <li><a href="${pageContext.request.contextPath}/inputbill/ibList.html">进货订单管理</a></li>
-                <li id="active"><a href="${pageContext.request.contextPath}/bill/billList.html">订单管理</a></li>
+                <li><a href="${pageContext.request.contextPath}/bill/billList.html">订单管理</a></li>
                 <li ><a href="${pageContext.request.contextPath}/userManager/userList.html">用户管理</a></li>
-                <li><a href="${pageContext.request.contextPath}/product/productList.html">商品管理</a></li>
+                <li id="active"><a href="${pageContext.request.contextPath}/product/productList.html">商品管理</a></li>
                 <li><a href="${pageContext.request.contextPath}/admin/adminInfo.html">密码修改</a></li>
                 <li><a href="${pageContext.request.contextPath}/index/index.html">退出系统</a></li>
             </ul>
@@ -51,18 +51,16 @@
     <div class="right">
         <div class="location">
             <strong>你现在所在的位置是:</strong>
-            <span>订单管理页面 >> 信息查看</span>
+            <span>商品管理页面 >> 信息查看</span>
         </div>
         <div class="providerView">
-            <p><strong>订单号：</strong><span>231</span></p>
-            <p><strong>下单人姓名：</strong><span>123</span></p>
-            <p><strong>派送地址：</strong><span>北极</span></p>
-            <p><strong>订单金额：</strong><span>22</span></p>
-            <p><strong>下单商品及数量：</strong><span>22</span></p>
-            <p><strong>下单时间：</strong><span>描述</span></p>
-            <p><strong>订单状态：</strong><span>未付款</span></p>
-
-            <a href="${pageContext.request.contextPath}/bill/billList.html">返回</a>
+            <p><strong>商品编号：</strong><span>231</span></p>
+            <p><strong>商品类型：</strong><span>123</span></p>
+            <p><strong>商品名：</strong><span>未付款</span></p>
+            <p><strong>商品数量：</strong><span>北极</span></p>
+            <p><strong>进价：</strong><span>22</span></p>
+            <p><strong>售价：</strong><span>描述</span></p>
+            <a href="${pageContext.request.contextPath}/product/productList.html">返回</a>
         </div>
     </div>
 </section>

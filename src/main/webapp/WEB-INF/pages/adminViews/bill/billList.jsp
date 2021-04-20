@@ -41,7 +41,7 @@
                 <li><a href="${pageContext.request.contextPath}/inputbill/ibList.html">进货订单管理</a></li>
                 <li id="active"><a href="${pageContext.request.contextPath}/bill/billList.html">订单管理</a></li>
                 <li ><a href="${pageContext.request.contextPath}/userManager/userList.html">用户管理</a></li>
-                <li><a href="${pageContext.request.contextPath}/product/ptoductList.html">商品管理</a></li>
+                <li><a href="${pageContext.request.contextPath}/product/productList.html">商品管理</a></li>
                 <li><a href="${pageContext.request.contextPath}/admin/adminInfo.html">密码修改</a></li>
                 <li><a href="${pageContext.request.contextPath}/index/index.html">退出系统</a></li>
             </ul>
@@ -50,25 +50,24 @@
     <div class="right">
         <div class="location">
             <strong>你现在所在的位置是:</strong>
-            <span>进货订单管理</span>
+            <span>订单管理</span>
         </div>
         <div class="search">
-            <span>商品名称：</span>
-            <input type="text" placeholder="请输入商品的名称"/>
+            <span>用户订单：</span>
+            <input type="text" placeholder="请输入要查询订单的用户名"/>
 
-            <span>供应商：</span>
+            <span>订单地址：</span>
+            <input type="text" placeholder="请输入订单地址"/>
+
+            <span>订单状态：</span>
             <select name="tigong" >
-                <option value="">--请选择--</option>
-                <option value="">北京市粮油总公司</option>
-                <option value="">邯郸市五得利面粉厂</option>
-            </select>
-
-            <span>是否付款：</span>
-            <select name="fukuan">
                 <option value="">--请选择--</option>
                 <option value="">已付款</option>
                 <option value="">未付款</option>
+                <option value="">已派送</option>
+                <option value="">未派送</option>
             </select>
+
 
             <input type="button" value="查询"/>
             <a href="${pageContext.request.contextPath}/bill/billAdd.html">添加订单</a>
@@ -76,13 +75,13 @@
         <!--账单表格 样式和供应商公用-->
         <table class="providerTable" cellpadding="0" cellspacing="0">
             <tr class="firstTr">
-                <th width="10%">账单编码</th>
-                <th width="20%">商品名称</th>
-                <th width="10%">供应商</th>
-                <th width="10%">账单金额</th>
-                <th width="10%">是否付款</th>
-                <th width="10%">创建时间</th>
-                <th width="30%">操作</th>
+                <th width="10%">订单号</th>
+                <th width="10%">下单人姓名</th>
+                <th width="30%">派送地址</th>
+                <th width="10%">订单金额</th>
+                <th width="10%">订单状态</th>
+                <th width="10%">下单时间</th>
+                <th width="20%">操作</th>
             </tr>
             <tr>
                 <td>213</td>

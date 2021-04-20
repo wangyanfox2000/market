@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: ASUS
   Date: 2021/4/19
-  Time: 12:19
+  Time: 12:31
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -40,9 +40,9 @@
         <nav>
             <ul class="list">
                 <li><a href="${pageContext.request.contextPath}/inputbill/ibList.html">进货订单管理</a></li>
-                <li id="active"><a href="${pageContext.request.contextPath}/bill/billList.html">订单管理</a></li>
+                <li><a href="${pageContext.request.contextPath}/bill/billList.html">订单管理</a></li>
                 <li ><a href="${pageContext.request.contextPath}/userManager/userList.html">用户管理</a></li>
-                <li><a href="${pageContext.request.contextPath}/product/productList.html">商品管理</a></li>
+                <li id="active"><a href="${pageContext.request.contextPath}/product/productList.html">商品管理</a></li>
                 <li><a href="${pageContext.request.contextPath}/admin/adminInfo.html">密码修改</a></li>
                 <li><a href="${pageContext.request.contextPath}/index/index.html">退出系统</a></li>
             </ul>
@@ -51,49 +51,40 @@
     <div class="right">
         <div class="location">
             <strong>你现在所在的位置是:</strong>
-            <span>订单管理 >> 订单修改页面</span>
+            <span>商品管理管理 >> 商品添加页面<</span>
         </div>
         <div class="providerAdd">
             <form action="#">
                 <!--div的class 为error是验证错误，ok是验证成功-->
                 <div class="">
-                    <label for="providerId">订单号：</label>
-                    <input type="text" name="providerId" id="providerId" placeholder="322" readonlyre/>
-                    <span>*</span>
+                    <label >商品类型：</label>
+                    <select name="creator" >
+                        <option value="">--请选择相应的类型--</option>
+                        <option value="">管理员1号</option>
+                        <option value="">管理员2号</option>
+                    </select>
+                    <span>*请选择商品类型</span>
                 </div>
                 <div>
-                    <label for="providerName">商品名称：</label>
-                    <input type="text" name="providerName" id="providerName" placeholder="123"/>
-                    <span >*</span>
+                    <label for="pName">商品名称：</label>
+                    <input type="text" name="pName" id="pName" required/>
+                    <span >*请输入商品名称</span>
                 </div>
                 <div>
-                    <label for="phone">商品数量：</label>
-                    <input type="text" name="phone" id="phone" placeholder="22"/>
-                    <span>*</span>
-                </div>
-                <div>
-                    <label for="people">下单人姓名：</label>
-                    <input type="text" name="people" id="people" placeholder="北极"/>
-                    <span>*</span>
+                    <label for="pNum">商品数量：</label>
+                    <input type="text" name="pNum" id="pNum" required/>
+                    <span>*请输入大于0的正自然数，小数点后保留2位</span>
 
                 </div>
                 <div>
-                    <label for="address">下单地址：</label>
-                    <input type="text" name="address" id="address" placeholder="北极"/>
-                    <span>*</span>
-
+                    <label for="input_money">进价：</label>
+                    <input type="text" name="input_money" id="input_money" required/>
+                    <span>*请输入大于0的正自然数，小数点后保留2位</span>
                 </div>
                 <div>
-                    <label for="sum">总金额：</label>
-                    <input type="text" name="sum" id="sum" placeholder="200"/>
-                    <span>*</span>
-                </div>
-                <div>
-                    <label >订单状态：</label>
-                    <input type="radio" name="zhifu"checked/>未付款
-                    <input type="radio" name="zhifu"/>已付款
-                    <input type="radio" name="zhifu"/>已派送
-                    <input type="radio" name="zhifu"/>未派送
+                    <label for="output_money">售价：</label>
+                    <input type="text" name="output_money" id="output_money" required/>
+                    <span>*请输入大于0的正自然数，小数点后保留2位</span>
                 </div>
                 <div class="providerAddBtn">
                     <!--<a href="#">保存</a>-->

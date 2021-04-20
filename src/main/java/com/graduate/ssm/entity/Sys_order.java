@@ -13,6 +13,8 @@ public class Sys_order {
 
     private Integer oStatus;
 
+    private String oAddress;
+
     private Date registerDate;
 
     public Integer getId() {
@@ -53,6 +55,14 @@ public class Sys_order {
 
     public void setoStatus(Integer oStatus) {
         this.oStatus = oStatus;
+    }
+
+    public String getoAddress() {
+        return oAddress;
+    }
+
+    public void setoAddress(String oAddress) {
+        this.oAddress = oAddress == null ? null : oAddress.trim();
     }
 
     public Date getRegisterDate() {

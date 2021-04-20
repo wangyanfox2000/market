@@ -10,27 +10,27 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping(value = "/inputbill")
 //进货单页面
 public class InputBillController {
-    //管理员界面->订单界面
+    //管理员界面->进货单界面
     @RequestMapping(value = "/ibList.html")
     public String goibilllist(HttpServletRequest request, HttpServletResponse response){
-        return "adminViews/ibList";
+        return "adminViews/inputbill/ibList";
     }
 
-    //进货订单界面->添加订单
+    //进货订单界面->添加进货单
     @RequestMapping(value = "/ibAdd.html")
     public String addibill(HttpServletRequest request, HttpServletResponse response){
-        return "adminViews/ibAdd";
+        return "adminViews/inputbill/ibAdd";
     }
 
-    //进货订单界面->修改订单
+    //进货订单界面->修改进货单
     @RequestMapping(value = "/ibUpdate.html")
     public String updateibill(HttpServletRequest request, HttpServletResponse response){
-        return "adminViews/ibUpdate";
+        return "adminViews/inputbill/ibUpdate";
     }
 
-    //进货订单界面->查看订单
+    //进货订单界面->查看进货单
     @RequestMapping(value = "/ibView.html")
     public String lookibill(HttpServletRequest request, HttpServletResponse response){
-        return "adminViews/ibView";
+        return "adminViews/inputbill/ibView";
     }
 }

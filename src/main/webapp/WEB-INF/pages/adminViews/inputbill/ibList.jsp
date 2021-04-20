@@ -38,10 +38,10 @@
         <h2 class="leftH2"><span class="span1"></span>功能列表 <span></span></h2>
         <nav>
             <ul class="list">
-                <li><a href="${pageContext.request.contextPath}/inputbill/ibList.html">进货订单管理</a></li>
+                <li id="active"><a href="${pageContext.request.contextPath}/inputbill/ibList.html">进货订单管理</a></li>
                 <li><a href="${pageContext.request.contextPath}/bill/billList.html">订单管理</a></li>
                 <li ><a href="${pageContext.request.contextPath}/userManager/userList.html">用户管理</a></li>
-                <li id="active"><a href="${pageContext.request.contextPath}/product/productList.html">商品管理</a></li>
+                <li><a href="${pageContext.request.contextPath}/product/productList.html">商品管理</a></li>
                 <li><a href="${pageContext.request.contextPath}/admin/adminInfo.html">密码修改</a></li>
                 <li><a href="${pageContext.request.contextPath}/index/index.html">退出系统</a></li>
             </ul>
@@ -50,32 +50,37 @@
     <div class="right">
         <div class="location">
             <strong>你现在所在的位置是:</strong>
-            <span>商品管理</span>
+            <span>进货订单管理</span>
         </div>
         <div class="search">
-            <span>商品名称：</span>
+            <span>进货商品：</span>
             <input type="text" placeholder="请输入商品的名称"/>
 
-            <span>商品类型：</span>
+            <span>进货日期：</span>
             <select name="tigong" >
                 <option value="">--请选择--</option>
-                <option value="">水果</option>
-                <option value="">蔬菜9</option>
+                <option value="">2021-4-20</option>
+                <option value="">2021-4-19</option>
             </select>
 
+            <%--<span>是否付款：</span>
+            <select name="fukuan">
+                <option value="">--请选择--</option>
+                <option value="">已付款</option>
+                <option value="">未付款</option>
+            </select>--%>
+
             <input type="button" value="查询"/>
-            <a href="${pageContext.request.contextPath}/product/productAdd.html">添加商品</a>
-            <a href="${pageContext.request.contextPath}/product/productTypeAdd.html">添加商品类型</a>
+            <a href="${pageContext.request.contextPath}/inputbill/ibAdd.html">添加进货单</a>
         </div>
         <!--账单表格 样式和供应商公用-->
         <table class="providerTable" cellpadding="0" cellspacing="0">
             <tr class="firstTr">
-                <th width="15%">商品编号</th>
-                <th width="15%">商品类型</th>
-                <th width="15%">商品名</th>
-                <th width="10%">进价</th>
-                <th width="10%">售价</th>
-                <th width="15%">数量</th>
+                <th width="10%">进货单编码</th>
+                <th width="35%">进货商品</th>
+                <th width="10%">账单金额</th>
+                <th width="10%">进货日期</th>
+                <th width="15%">创建人</th>
                 <th width="20%">操作</th>
             </tr>
             <tr>
@@ -84,23 +89,21 @@
                 <td>324.6</td>
                 <td>2021-4-20</td>
                 <td>管理员1号</td>
-                <td>3423424</td>
                 <td>
-                    <a href="${pageContext.request.contextPath}/product/productView.html" ><img src="<%=basePath%>/statics/images/read.png" alt="查看" title="查看"/></a><%--class="BillView"--%>
-                    <a href="${pageContext.request.contextPath}/product/productUpdate.html" ><img src="<%=basePath%>/statics/images/xiugai.png" alt="修改" title="修改"/></a><%--class="updateBill"--%>
+                    <a href="${pageContext.request.contextPath}/inputbill/ibView.html" ><img src="<%=basePath%>/statics/images/read.png" alt="查看" title="查看"/></a><%--class="BillView"--%>
+                    <a href="${pageContext.request.contextPath}/inputbill/ibUpdate.html" ><img src="<%=basePath%>/statics/images/xiugai.png" alt="修改" title="修改"/></a><%--class="updateBill"--%>
                     <a href="#" class="removeBill"><img src="<%=basePath%>/statics/images/schu.png" alt="删除" title="删除"/></a>
                 </td>
             </tr>
             <tr>
-                <td>3423424</td>
-                <td>巧克力，蔬菜</td>
-                <td>324.6</td>
-                <td>2021-4-20</td>
-                <td>管理员1号</td>
-                <td>3423424</td>
+                <td>342ewrwer</td>
+                <td>wawawa</td>
+                <td>666</td>
+                <td>2021-4-19</td>
+                <td>管理员2号</td>
                 <td>
-                    <a href="${pageContext.request.contextPath}/product/productView.html" ><img src="<%=basePath%>/statics/images/read.png" alt="查看" title="查看"/></a><%--class="BillView"--%>
-                    <a href="${pageContext.request.contextPath}/product/productUpdate.html" ><img src="<%=basePath%>/statics/images/xiugai.png" alt="修改" title="修改"/></a><%--class="updateBill"--%>
+                    <a href="${pageContext.request.contextPath}/inputbill/ibView.html" ><img src="<%=basePath%>/statics/images/read.png" alt="查看" title="查看"/></a><%--class="BillView"--%>
+                    <a href="${pageContext.request.contextPath}/inputbill/ibUpdate.html" ><img src="<%=basePath%>/statics/images/xiugai.png" alt="修改" title="修改"/></a><%--class="updateBill"--%>
                     <a href="#" class="removeBill"><img src="<%=basePath%>/statics/images/schu.png" alt="删除" title="删除"/></a>
                 </td>
             </tr>

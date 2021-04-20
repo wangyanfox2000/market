@@ -39,8 +39,8 @@
         <h2 class="leftH2"><span class="span1"></span>功能列表 <span></span></h2>
         <nav>
             <ul class="list">
-                <li><a href="${pageContext.request.contextPath}/inputbill/ibList.html">进货订单管理</a></li>
-                <li id="active"><a href="${pageContext.request.contextPath}/bill/billList.html">订单管理</a></li>
+                <li id="active"><a href="${pageContext.request.contextPath}/inputbill/ibList.html">进货订单管理</a></li>
+                <li><a href="${pageContext.request.contextPath}/bill/billList.html">订单管理</a></li>
                 <li ><a href="${pageContext.request.contextPath}/userManager/userList.html">用户管理</a></li>
                 <li><a href="${pageContext.request.contextPath}/product/productList.html">商品管理</a></li>
                 <li><a href="${pageContext.request.contextPath}/admin/adminInfo.html">密码修改</a></li>
@@ -51,18 +51,17 @@
     <div class="right">
         <div class="location">
             <strong>你现在所在的位置是:</strong>
-            <span>订单管理页面 >> 信息查看</span>
+            <span>进货单管理页面 >> 信息查看</span>
         </div>
         <div class="providerView">
-            <p><strong>订单号：</strong><span>231</span></p>
-            <p><strong>下单人姓名：</strong><span>123</span></p>
-            <p><strong>派送地址：</strong><span>北极</span></p>
-            <p><strong>订单金额：</strong><span>22</span></p>
-            <p><strong>下单商品及数量：</strong><span>22</span></p>
-            <p><strong>下单时间：</strong><span>描述</span></p>
-            <p><strong>订单状态：</strong><span>未付款</span></p>
+            <p><strong>进货单号：</strong><span>231</span></p>
+            <p><strong>进货商品：</strong><span>123</span></p>
+            <p><strong>商品数量：</strong><span>北极</span></p>
+            <p><strong>总金额：</strong><span>22</span></p>
+            <p><strong>创建人：</strong><span>描述</span></p>
+            <p><strong>创建时间：</strong><span>未付款</span></p>
 
-            <a href="${pageContext.request.contextPath}/bill/billList.html">返回</a>
+            <a href="${pageContext.request.contextPath}/inputbill/ibList.html">返回</a>
         </div>
     </div>
 </section>
