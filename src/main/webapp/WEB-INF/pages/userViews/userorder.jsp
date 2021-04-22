@@ -22,7 +22,7 @@
 <body>
 <div class="header_con">
     <div class="header">
-        <div class="welcome fl">欢迎来到美多商城!</div>
+        <div class="welcome fl">欢迎来到线上超市!</div>
         <div class="fr">
             <div class="login_info fl">
                 欢迎您：<em>张 山</em>
@@ -31,6 +31,8 @@
                 <a href="${pageContext.request.contextPath}/index/login.html">登录</a>
                 <span>|</span>
                 <a href="${pageContext.request.contextPath}/index/register.html">注册</a>
+                <span>|</span>
+                <a href="${pageContext.request.contextPath}/index/adminlogin.html">管理员登录</a>
             </div>
             <div class="user_link fl">
                 <span>|</span>
@@ -45,8 +47,15 @@
 </div>
 
 <div class="search_bar clearfix">
-    <a href="${pageContext.request.contextPath}/index/index.html" class="logo fl"><img src="<%=basePath%>/statics/images/logo.png"></a>
-    <div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;&nbsp;提交订单</div>
+    <div class="sub_page_name fl" >
+        <a href="${pageContext.request.contextPath}/index/index.html">
+            线上超市
+        </a>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <a>
+            提交订单
+        </a>
+    </div>
     <div class="search_con fr  mt40">
         <input type="text" class="input_text fl" name="" placeholder="搜索商品">
         <input type="button" class="input_btn fr" name="" value="搜索">

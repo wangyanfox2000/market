@@ -17,11 +17,126 @@
     <title>用户-购物车</title>
     <link rel="stylesheet" type="text/css" href="<%=basePath%>/statics/css/reset.css">
     <link rel="stylesheet" type="text/css" href="<%=basePath%>/statics/css/main.css">
+    <script>
+        /*function add() {
+            var num=$("#num1").val();
+            num=1+num;
+            $("#num1").val(num);
+        }
+
+        function minus() {
+            var num=$("#num1").val();
+            if(num>1){
+                num=num-1;
+                $("#num1").val(num);
+            }
+        }*/
+
+       /* <tr align="center"> <!-- 3行 -->
+            <td><input type="checkbox" name="checkItem"/></td>
+            <td>雪花啤酒</td>
+            <td><div class="price">5</div></td>
+            <td><img src="image/add.png" name="add" onclick="addnumber(this)"><div name="counterDiv">5</div><img src="image/cut.png" name="cut" onclick="cutnumber(this)"></td> <!-- <input type="number" id="sumcounter1" min="5" step="1" max="10" value="5"/> -->
+            <td><div name="sumprice">25</div></td>
+            <td><input type="button" name="deletetd" value="删除" onclick="deletetd(this)" /></td>
+        </tr>*/
+
+       /* function addnumber(obj){ //计数器加
+            var tr=obj.parentNode.parentNode;
+            var col=tr.cells;
+            var price=col[2].textContent;//获取单元格的内容,价格
+            var counter=col[3].textContent;
+
+            counter++;
+            col[3].innerHTML="<img src='image/add.png' name='add' onclick='addnumber(this)'><div name='counterDiv'>"+counter+"</div><img src='image/cut.png' name='cut' onclick='cutnumber(this)'>";
+
+            col[4].innerHTML="<div name='sumprice'>"+price*counter+"</div>";//赋值
+
+
+            var mytable=document.getElementById("mytable");
+            var sum=0;
+            for(var i=2;i<mytable.rows.length-1;i++){
+                sum=parseInt(sum)+parseInt(((mytable.rows[i]).cells[4]).textContent);
+            }
+            document.getElementById("sum").innerHTML="<div name='sumprice' style='display: inline;'>"+sum+"</div>";
+        }
+
+        function cutnumber(obj){ //计数器减
+            var tr=obj.parentNode.parentNode;//获取当前行的tr对象
+            var col=tr.cells;
+            var price=col[2].textContent;//获取单元格的内容,价格
+            var counter=col[3].textContent;
+
+            counter--;
+            col[3].innerHTML="<img src='image/add.png' name='add' onclick='addnumber(this)'><div name='counterDiv'>"+counter+"</div><img src='image/cut.png' name='cut' onclick='cutnumber(this)'>";
+
+            col[4].innerHTML="<div name='sumprice'>"+price*counter+"</div>";//赋值
+
+            var mytable=document.getElementById("mytable");
+            var sum=0;
+            for(var i=2;i<mytable.rows.length-1;i++){
+                sum=parseInt(sum)+parseInt(((mytable.rows[i]).cells[4]).textContent);
+            }
+            document.getElementById("sum").innerHTML="<div name='sumprice' style='display: inline;'>"+sum+"</div>";
+        }*/
+
+        /*function checkAll(){ //全选
+            var checkStatue=document.getElementById("ckAll").checked;
+            var checkItem=document.getElementsByName("checkItem");
+            for(var i in checkItem){
+                checkItem[i].checked=checkStatue;
+            }
+        }
+
+        function deleteChecked()  //删除所选商品
+        {
+            var sum=document.getElementById("sum").textContent;//取表格的总计
+            var mytable=document.getElementById("mytable");
+            var checkItem=document.getElementsByName("checkItem");
+            var cutsum=0;
+            for(var i=checkItem.length-1;i>=0;i--){
+                if(checkItem[i].checked==true){
+                    var tr=checkItem[i].parentNode.parentNode;
+                    cutsum=parseInt(cutsum)+parseInt(tr.cells[4].textContent);//取删除时的总计
+                    tr.remove();
+                }
+            }
+            document.getElementById("sum").innerHTML="<div name='sumprice' style='display: inline;'>"+(sum-cutsum)+"</div>";
+        }
+
+        function addgoods(){  //添加商品
+            var name=document.getElementById("goodsname").value;
+            var price=document.getElementById("goodsprice").value;
+            var count=document.getElementById("sumcounter3").value;
+            var mytable=document.getElementById("mytable");
+
+            var sum=document.getElementById("sum").textContent;
+            sum=parseInt(sum)+price*count;
+            document.getElementById("sum").innerHTML="<div name='sumprice' style='display: inline;'>"+sum+"</div>";
+
+            mytable.insertRow(mytable.rows.length-1).innerHTML="<tr align='center'>"
+                +"<td align='center'><input type='checkbox' name='checkItem'/></td>  "
+                +" <td align='center'>"+name+"</td> "
+                +" <td align='center'>"+price+"</td> "
+                +" <td align='center'><img src='image/add.png' name='add' onclick='addnumber(this)'><div name='counterDiv'>"+count+"</div><img src='image/cut.png' name='cut' onclick='cutnumber(this)'></td> "
+                +" <td align='center'><div name='sumprice'>"+price*count+"</div></td>  "
+                +" <td align='center'><input type='button'  name='deletetd' value='删除' onclick='deletetd(this)' /></td>"
+                +"</tr>"
+        }
+
+        function deletetd(obj){ //删除单行的商品
+            var sum=document.getElementById("sum").textContent;//取表格的总计
+            var tr=obj.parentNode.parentNode;
+            tr.remove();
+            document.getElementById("sum").innerHTML="<div name='sumprice' style='display: inline;'>"+(sum-parseInt(tr.cells[4].textContent))+"</div>";
+        }*/
+    </script>
+
 </head>
 <body>
 <div class="header_con">
     <div class="header">
-        <div class="welcome fl">欢迎来到美多商城!</div>
+        <div class="welcome fl">欢迎来到线上超市!</div>
         <div class="fr">
             <div class="login_info fl">
                 欢迎您：<em>张 山</em>
@@ -30,6 +145,8 @@
                 <a href="${pageContext.request.contextPath}/index/login.html">登录</a>
                 <span>|</span>
                 <a href="${pageContext.request.contextPath}/index/register.html">注册</a>
+                <span>|</span>
+                <a href="${pageContext.request.contextPath}/index/adminlogin.html">管理员登录</a>
             </div>
             <div class="user_link fl">
                 <span>|</span>
@@ -44,8 +161,15 @@
 </div>
 
 <div class="search_bar clearfix">
-    <a href="${pageContext.request.contextPath}/index/index.html" class="logo fl"><img src="<%=basePath%>/statics/images/logo.png"></a>
-    <div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;&nbsp;用户中心</div>
+    <div class="sub_page_name fl" >
+        <a href="${pageContext.request.contextPath}/index/index.html">
+            线上超市
+        </a>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <a>
+            用户中心
+        </a>
+    </div>
     <div class="search_con fr mt40">
         <input type="text" class="input_text fl" name="" placeholder="搜索商品">
         <input type="button" class="input_btn fr" name="" value="搜索">
@@ -83,9 +207,9 @@
     <li class="col05">16.80元</li>
     <li class="col06">
         <div class="num_add">
-            <a href="javascript:;" class="add fl">+</a>
-            <input type="text" class="num_show fl" value="1">
-            <a href="javascript:;" class="minus fl">-</a>
+            <a href="javascript:;" class="add fl" id="add1" onclick="add()">+</a>
+            <input type="text" class="num_show fl" id="num1" value="1">
+            <a href="javascript:;" class="minus fl" id="minus1" onclick="minus()">-</a>
         </div>
     </li>
     <li class="col07">16.80元</li>
@@ -105,14 +229,8 @@
         <a href="#">关于我们</a>
         <span>|</span>
         <a href="#">联系我们</a>
-        <span>|</span>
-        <a href="#">招聘人才</a>
-        <span>|</span>
-        <a href="#">友情链接</a>
     </div>
-    <p>CopyRight © 2016 北京美多商业股份有限公司 All Rights Reserved</p>
-    <p>电话：010-****888    京ICP备*******8号</p>
 </div>
-
+<%--<script type="text/javascript" src="<%=basePath%>/statics/js/cart_aj.js"/>--%>
 </body>
 </html>

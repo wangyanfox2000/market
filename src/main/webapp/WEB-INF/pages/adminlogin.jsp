@@ -13,23 +13,16 @@
 %>
 <html>
 <head>
-    <title>南工大线上超市-登录</title>
+    <title>南工大线上超市-管理员登录</title>
     <link rel="stylesheet" type="text/css" href="<%=basePath%>/statics/css/reset.css">
     <link rel="stylesheet" type="text/css" href="<%=basePath%>/statics/css/main.css">
 </head>
 <body>
-<div class="login_top clearfix">
-    <div class="login_name_title">
-        <a  href="${pageContext.request.contextPath}/index/index.html">南工大线上超市</a>
-    </div>
-</div>
-<div class="login_form_bg">
+<div class="adminlogin_form_bg">
     <div class="login_form_wrap clearfix">
-        <div class="login_banner fl"></div>
-        <div class="slogan fl">线上超市<br>*<br>欢迎选购</div>
-        <div class="login_form fr">
+        <div class="adminlogin_form">
             <div class="login_title clearfix">
-                <a href="javascript:;" class="cur">账户登录</a>
+                <a href="javascript:;" class="cur">管理员登录</a>
             </div>
             <div class="form_con">
                 <div class="form_input cur">
@@ -47,9 +40,7 @@
                 </div>
             </div>
             <div class="third_party">
-                <%--<a href="#" class="qq_login">QQ</a>
-                <a href="#" class="weixin_login">微信</a>--%>
-                <a href="${pageContext.request.contextPath}/index/register.html" class="register_btn">立即注册</a>
+                <a href="${pageContext.request.contextPath}/index/index.html" class="register_btn">返回首页</a>
             </div>
 
         </div>
@@ -58,11 +49,9 @@
 
 <div class="footer no-mp">
     <div class="foot_link">
-        <a href="#">关于我们</a>
         <span>|</span>
-        <a href="#">联系我们</a>
+        <a href="#">今天的工作做完了吗？</a>
         <span>|</span>
-        <a href="${pageContext.request.contextPath}/index/adminlogin.html">管理员登录</a>
     </div>
 </div>
 

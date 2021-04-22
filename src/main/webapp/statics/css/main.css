@@ -21,7 +21,7 @@ html,body{height:100%}
 	display:none;
 }
 
-.login_info em{color:#ff8800}
+.login_info em{color:#9ac70f}
 
 .login_info .quit{
 	color:#666;
@@ -29,7 +29,7 @@ html,body{height:100%}
 }
 
 .login_info .quit:hover{
-	color:#ff8800;
+	color:#9ac70f;
 }
 
 .login_btn a,.user_link a{
@@ -37,7 +37,7 @@ html,body{height:100%}
 }
 
 .login_btn a:hover,.user_link a:hover{
-	color:#ff8800;
+	color:#9ac70f;
 }
 
 .login_btn span,.user_link span{
@@ -53,12 +53,12 @@ html,body{height:100%}
 
 .search_wrap{width:618px;height:60px;margin:34px 0 0 124px;}
 
-.search_con{width:616px;height:32px;border:1px solid #fe0000;background:url(../images/icons.png) 10px -340px no-repeat;}
+.search_con{width:616px;height:32px;border:1px solid #87c212;background:url(../images/icons.png) 10px -340px no-repeat;}
 
 .search_con .input_text{width:470px;height:28px;border:0px;margin:2px 0 0 36px;outline:none;font-size:12px;color:#737272;font-family:'Microsoft Yahei'}
 
 .search_con .input_btn{
-	width:100px;height:32px;background-color:#fe0000;border:0px;font-size:14px;color:#fff;font-family:'Microsoft Yahei';outline:none;cursor:pointer;
+	width:100px;height:32px;background-color:#87c212;border:0px;font-size:15px;color:#fff;font-family:'Microsoft Yahei';outline:none;cursor:pointer;
 }
 
 .search_suggest{
@@ -77,7 +77,7 @@ html,body{height:100%}
 }
 
 .search_suggest li a:hover{
-	color:#f80;
+	color:#43a200;
 }
 
 .mt40{margin-top:40px}
@@ -156,7 +156,7 @@ html,body{height:100%}
 .navlist{margin-left:34px;}
 .navlist li{float:left;line-height:30px;}
 .navlist li a{color:#666;font-size:14px}
-.navlist li a:hover{color:#ff8800}
+.navlist li a:hover{color:#9ac70f}
 .navlist .interval{margin:0 15px;}
 
 .pos_center_con{width:100%;height:350px;margin:0 auto;position:relative;}
@@ -165,7 +165,7 @@ html,body{height:100%}
 .subnav li{height:44px;border-bottom:1px solid #eee;background:url(../images/icons.png) 178px -257px no-repeat #fff;}
 
 .subnav li a{display:block;height:44px;line-height:44px;text-indent:71px;font-size:14px;color:#333}
-.subnav li a:hover{color:#ff8800}
+.subnav li a:hover{color:#9ac70f}
 
 .subnav li .fruit{background:url(../images/icons.png) 28px 0px no-repeat;}
 .subnav li .seafood{background:url(../images/icons.png) 28px -43px no-repeat;}
@@ -186,8 +186,9 @@ html,body{height:100%}
 .slide li{width:100%;height:350px;position:absolute;left:0px;top:0px;overflow:hidden;}
 .slide li a{display:block;width:100%;height:350px;}
 .slide li a img{
-	position:absolute;
-	left:50%;
+	/*position:absolute;*/
+	position: absolute;
+	left:62%;
 	top:0px;
 	margin-left:-800px;
 }
@@ -349,7 +350,7 @@ html,body{height:100%}
 
 .goods_list li h4{width:200px;margin:15px auto 0;text-align:center;}
 .goods_list li h4 a{font-size:12px;color:#666;font-weight:normal;line-height:24px;width:160px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:block;margin:0 auto;}
-.goods_list li h4 a:hover{color:#ff8800}
+.goods_list li h4 a:hover{color:#9ac70f}
 
 .goods_list li img{width:130px;height:130px;}
 .goods_list li .prize{text-align:center;font-size:16px;color:#ff0027;margin-top:5px;}
@@ -402,13 +403,13 @@ html,body{height:100%}
 
 /* 页面底部样式 */
 .footer{
-	border-top:1px solid #fe0000;
+	border-top:1px solid #43a200;
 	margin:30px 0;
 }
 
 .foot_link{text-align:center;margin-top:30px;}
 .foot_link a,.foot_link span{color:#4e4e4e;}
-.foot_link a:hover{color:#ff8800}
+.foot_link a:hover{color:#9ac70f}
 .foot_link span{padding:0 10px}
 .footer p{text-align:center; margin-top:10px;}
 
@@ -418,7 +419,7 @@ html,body{height:100%}
 	width:1200px;height:40px;margin:0 auto;
 }
 .breadcrumb a{line-height:40px;color:#fe0000}
-.breadcrumb a:hover{color:#ff8800}
+.breadcrumb a:hover{color:#9ac70f}
 .breadcrumb span{line-height:40px;color:#fe0000;padding:0 5px;}
 
 
@@ -635,19 +636,31 @@ html,body{height:100%}
 
 
 /* 登录页 */
-.login_top{width:960px;height:130px;margin:0 auto;}
+.login_top{width:100%;height:130px;margin-top: 30px;background: #9ac70f;text-align: center}
 .login_logo{display:block;width:193px;height:76px;margin-top:30px;}
-.login_form_bg{height:480px;background-color:#810101}
+/*.login_form_bg{height:600px;background-color: #87c212;}*/
+.login_form_bg{height:600px;background:url("../images/bg/bg2.jpg") no-repeat;background-size: cover}
+
+.adminlogin_form_bg{height:760px;background: url("../images/index_pic2.jpg") no-repeat;}
 .no-mp{margin-top:0px;}
 .login_form_wrap{width:1000px;height:480px;margin:0 auto;}
-.login_banner{width:500px;height:386px;background:url(../images/login_banner.png) no-repeat;margin-top:40px;}
-.slogan{width:30px;height:300px;font-size:24px;color:#f9dddd;text-align:center;line-height:30px;margin:65px 0 0 30px}
-.login_form{width:368px;height:378px;border:1px solid #c6c6c5;background-color:#fff; margin-top:50px;}
+
+/*.login_banner{width:500px;height:600px;background:url(../images/login_bg2.jpg) no-repeat;margin-top:0px;}*/
+.login_banner{width:500px;height:600px;margin-top:0px;opacity: 0;}
+
+.slogan{width:30px;height:300px;font-size:24px;color:#f9dddd;text-align:center;line-height:30px;margin:110px 0 0 30px}
+.login_form{width:368px;height:378px;border:1px solid #c6c6c5;background-color:#fff; margin-top:70px;}
+.adminlogin_form{width:368px;height:378px;border:1px solid #c6c6c5;background-color:#fff; margin-top:200px;margin-left: 316px;}
 
 .login_title{height:60px;width:308px;margin:10px auto;border-bottom:1px solid #e0e0e0;}
 
 .login_title a{width:308px;line-height:20px;font-size:18px;color:#5e5e5e;text-align:center;float:left;margin-top:20px;}
 /* .login_title a:first-child{border-right:1px solid #e0e0e0} */
+/**********************/
+.login_name_title{height: 60px;width: 36%;margin-left: 32%;margin-bottom:5px;}
+/*.login_name_title a{font-size: 50px;color: #fff4e8;font-family: Cambria;margin-top: 10px}*/
+.login_name_title a{font-size: 50px;color: #fff4e8;font-family: Serif;}
+/**********************/
 .login_title a.cur{color:#e3101e}
 .form_input{width:308px;height:210px;margin:20px auto;position:relative;display:none;}
 .form_con .cur{display:block;}
@@ -671,7 +684,7 @@ html,body{height:100%}
 .more_input input{float:left;margin-top:2px;}
 .more_input label{float:left;margin-left:10px;}
 .more_input a{float:right;color:#666}
-.more_input a:hover{color:#ff8800}
+.more_input a:hover{color:#9ac70f}
 
 .input_submit{width:100%;height:40px;position:absolute;left:0;top:180px;background-color:#ff5757;color:#fff;font-size:22px;border:0px;font-family:'Microsoft Yahei';cursor:pointer;}
 
@@ -687,8 +700,8 @@ html,body{height:100%}
 .l_con{width:300px;}
 .reg_logo{width:200px;height:76px;float:right;margin-right:30px;}
 .reg_slogan{width:300px;height:30px;float:right;text-align:right;font-size:22px;color:#fe0000;margin:20px 30px 0 0;}
-.reg_banner{width:251px;height:329px;background:url(../images/register_banner.png) no-repeat;float:right; margin:20px 10px 0 0;opacity:0.5}
-
+.reg_banner{width:300px;height:580px;background:url(../images/bg/reg_bg.jpg) no-repeat;float:right; margin:5px 10px 0 0;opacity:0.7}
+/*.reg_banner{width:251px;height:329px;background:url(../images/register_banner.png) no-repeat;float:right; margin:20px 10px 0 0;opacity:0.5}*/
 
 .r_con{width:420px;overflow:hidden;}
 .reg_title{width:380px;height:50px;float:left;margin-left:30px;border-bottom:1px solid #e0e0e0}
@@ -724,12 +737,13 @@ html,body{height:100%}
 
 .reg_form li.agreement input{width:15px;height:15px;float:left;margin-top:13px;margin-left:87px;}
 .reg_form li.agreement label{width:250px;float:left;margin-left:10px;text-align:left;}
-.reg_form li.reg_sub input{width:380px;height:40px;background-color:#ff5757;font-size:18px;color:#fff;font-family:'Microsoft Yahei';cursor:pointer;}
+.reg_form li.reg_sub input{width:380px;height:40px;background-color:#87c212;font-size:18px;color:#fff;font-family:'Microsoft Yahei';cursor:pointer;}
 .reg_form li .error_tip{float:left;height:30px;line-height:30px;margin-left:87px;color:#e62e2e;}
 .reg_form li .error_tip2{float:left;height:20px;line-height:20px;color:#e62e2e;}
 
-
 .sub_page_name{font-size:20px;color:#666;margin:60px 0 0 43px}
+.sub_page_name a:hover{color: #bf70ef;text-decoration: underline;}
+
 
 .total_count{
 	width:1200px;margin:0 auto;height:40px;line-height:40px;font-size:14px;
@@ -774,24 +788,24 @@ html,body{height:100%}
 .settlements .col01{width:4%;text-align:center}
 .settlements .col02{width:12%;}
 .settlements .col03{width:69%; height:48px; line-height:28px;text-align:right;margin-top:10px;}
-.settlements .col03 span{color:#ff0000;padding-right:5px}
-.settlements .col03 em{color:#ff3d3d;font-size:22px;font-weight:bold;}
-.settlements .col03 span{color:#ff0000;}
-.settlements .col03 b{color:#ff0000;font-size:14px;padding:0 5px;}
+.settlements .col03 span{color:#9ac70f;padding-right:5px}
+.settlements .col03 em{color:#87c212;font-size:22px;font-weight:bold;}
+.settlements .col03 span{color:#43a200;}
+.settlements .col03 b{color:#43a200;font-size:14px;padding:0 5px;}
 
 .settlements .col04{width:14%;text-align:center;float:right;}
-.settlements .col04 a{display:block;height:78px;background-color:#ff3d3d;text-align:center;line-height:78px;color:#fff;font-size:24px}
+.settlements .col04 a{display:block;height:78px;background-color:#87c212;text-align:center;line-height:78px;color:#fff;font-size:24px}
 
 
 .common_title{width:1200px;margin:20px auto 0;font-size:14px;}
 
-.common_list_con{width:1200px;border:1px solid #dddddd;border-top:2px solid #e3101e;margin:10px auto 0;background-color:#f7f7f7;position:relative;}
+.common_list_con{width:1200px;border:1px solid #dddddd;border-top:2px solid #00bc6f;margin:10px auto 0;background-color:#87c212;position:relative;}
 
 .common_list_con dl{margin:20px;}
 .common_list_con dt{font-size:14px;font-weight:bold;margin-bottom:10px}
 .common_list_con dd input{vertical-align:bottom;margin-right:10px}
 
-.edit_site{position:absolute; right:20px;top:30px;width:100px;height:30px;background-color:#fe0000;text-align:center;line-height:30px;color:#fff}
+.edit_site{position:absolute; right:20px;top:30px;width:100px;height:30px;background-color:#43a200;text-align:center;line-height:30px;color:#fff}
 
 .pay_style_con{margin:20px;}
 .pay_style_con input{float:left;margin:14px 7px 0 0;}
@@ -910,7 +924,7 @@ html,body{height:100%}
 }
 
 .left_menu_con ul li .active{
-	color:#ff8800;
+	color:#9ac70f;
 	font-weight:bold;
 }
 
@@ -1080,7 +1094,7 @@ html,body{height:100%}
 }
 
 .site_pop_title{
-	background:#810101;
+	background:#43a200;
 	margin-left:-14px;
 	margin-right:-14px;
 	margin-top:-14px;	
@@ -1198,7 +1212,7 @@ html,body{height:100%}
 	background-color:#bd0c0c;
 }
 .stress{
-	color:#ff8800;
+	color:#9ac70f;
 }
 
 .judge_con{

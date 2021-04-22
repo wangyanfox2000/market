@@ -21,7 +21,7 @@
 <body>
 <div class="header_con">
     <div class="header">
-        <div class="welcome fl">欢迎来到美多商城!</div>
+        <div class="welcome fl">欢迎来到线上超市!</div>
         <div class="fr">
             <div class="login_info fl">
                 欢迎您：<em>张 山</em>
@@ -30,6 +30,8 @@
                 <a href="${pageContext.request.contextPath}/index/login.html">登录</a>
                 <span>|</span>
                 <a href="${pageContext.request.contextPath}/index/register.html">注册</a>
+                <span>|</span>
+                <a href="${pageContext.request.contextPath}/index/adminlogin.html">管理员登录</a>
             </div>
             <div class="user_link fl">
                 <span>|</span>
@@ -44,8 +46,15 @@
 </div>
 
 <div class="search_bar clearfix">
-    <a href="${pageContext.request.contextPath}/index/index.html" class="logo fl"><img src="<%=basePath%>/statics/images/logo.png"></a>
-    <div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;&nbsp;用户中心</div>
+    <div class="sub_page_name fl" >
+        <a href="${pageContext.request.contextPath}/index/index.html">
+            线上超市
+        </a>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <a>
+            用户中心
+        </a>
+    </div>
     <div class="search_con fr mt40">
         <input type="text" class="input_text fl" name="" placeholder="搜索商品">
         <input type="button" class="input_btn fr" name="" value="搜索">
@@ -71,61 +80,6 @@
                 <li><span>Email：</span>demo@demo.com</li>
             </ul>
         </div>
-
-        <h3 class="common_title2">最近浏览</h3>
-        <div class="has_view_list">
-            <ul class="goods_type_list clearfix">
-                <li>
-                    <a href="${pageContext.request.contextPath}/product/product_detail.html"><img src="<%=basePath%>/statics/images/goods/goods003.jpg"></a>
-                    <h4><a href="${pageContext.request.contextPath}/product/product_detail.html">360手机 N6 Pro 全网通</a></h4>
-                    <div class="operate">
-                        <span class="prize">￥2699.00</span>
-                        <span class="unit">台</span>
-                        <a href="#" class="add_goods" title="加入购物车"></a>
-                    </div>
-                </li>
-
-                <li>
-                    <a href="#"><img src="<%=basePath%>/statics/images/goods/goods004.jpg"></a>
-                    <h4><a href="#">360手机 N6 Pro 全网通</a></h4>
-                    <div class="operate">
-                        <span class="prize">￥2699.00</span>
-                        <span class="unit">台</span>
-                        <a href="#" class="add_goods" title="加入购物车"></a>
-                    </div>
-                </li>
-
-                <li>
-                    <a href="#"><img src="<%=basePath%>/statics/images/goods/goods005.jpg"></a>
-                    <h4><a href="#">360手机 N6 Pro 全网通</a></h4>
-                    <div class="operate">
-                        <span class="prize">￥2699.00</span>
-                        <span class="unit">台</span>
-                        <a href="#" class="add_goods" title="加入购物车"></a>
-                    </div>
-                </li>
-
-                <li>
-                    <a href="#"><img src="<%=basePath%>/statics/images/goods/goods006.jpg"></a>
-                    <h4><a href="#">360手机 N6 Pro 全网通</a></h4>
-                    <div class="operate">
-                        <span class="prize">￥2699.00</span>
-                        <span class="unit">台</span>
-                        <a href="#" class="add_goods" title="加入购物车"></a>
-                    </div>
-                </li>
-
-                <li>
-                    <a href="#"><img src="<%=basePath%>/statics/images/goods/goods007.jpg"></a>
-                    <h4><a href="#">急速路由</a></h4>
-                    <div class="operate">
-                        <span class="prize">￥64.5</span>
-                        <span class="unit">6.45/500g</span>
-                        <a href="#" class="add_goods" title="加入购物车"></a>
-                    </div>
-                </li>
-            </ul>
-        </div>
     </div>
 </div>
 
@@ -136,13 +90,7 @@
         <a href="#">关于我们</a>
         <span>|</span>
         <a href="#">联系我们</a>
-        <span>|</span>
-        <a href="#">招聘人才</a>
-        <span>|</span>
-        <a href="#">友情链接</a>
     </div>
-    <p>CopyRight © 2016 北京美多商业股份有限公司 All Rights Reserved</p>
-    <p>电话：010-****888    京ICP备*******8号</p>
 </div>
 
 </body>

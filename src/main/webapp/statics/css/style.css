@@ -52,14 +52,16 @@ input {
     outline: none;
 }
 
+/*
 .loginForm {
     background: url("../images/formBg.png") 0 0 no-repeat;
     width: 320px;
     height: 140px;
     border-radius: 8px;
     padding: 90px 38px 48px 30px;
-    /*border: 1px solid green;*/
+    !*border: 1px solid green;*!
 }
+*/
 
 .loginForm label {
     width: 20%;

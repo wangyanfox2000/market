@@ -22,8 +22,6 @@
 <body>
 <div class="register_con">
     <div class="l_con fl">
-        <a class="reg_logo"><img src="<%=basePath%>/statics/images/logo.png"></a>
-        <div class="reg_slogan">商品美 · 种类多 · 欢迎光临</div>
         <div class="reg_banner"></div>
     </div>
 
@@ -61,15 +59,15 @@
                         <img src="<%=basePath%>/statics/images/pic_code.jpg" alt="图形验证码" class="pic_code">
                         <span v-show="error_image_code" class="error_tip">请填写图片验证码</span>
                     </li>
-                    <li>
+                    <%--<li>
                         <label>短信验证码:</label>
                         <input type="text" v-model="sms_code" @blur="check_sms_code" name="msg_code" id="msg_code" class="msg_input">
                         <a href="#" class="get_msg_code">获取短信验证码</a>
                         <span v-show="error_sms_code" class="error_tip">请填写短信验证码</span>
-                    </li>
+                    </li>--%>
                     <li class="agreement">
                         <input type="checkbox" v-model="allow" @change="check_allow" name="allow" id="allow" checked="checked">
-                        <label>同意”美多商城用户使用协议“</label>
+                        <label>同意”线上超市用户使用协议“</label>
                         <span v-show="error_allow" class="error_tip2">请勾选同意</span>
                     </li>
                     <li class="reg_sub">
@@ -89,12 +87,8 @@
         <span>|</span>
         <a href="#">联系我们</a>
         <span>|</span>
-        <a href="#">招聘人才</a>
-        <span>|</span>
-        <a href="#">友情链接</a>
+        <a href="${pageContext.request.contextPath}/index/index.html">返回首页</a>
     </div>
-    <p>CopyRight © 2016 北京美多商业股份有限公司 All Rights Reserved</p>
-    <p>电话：010-****888    京ICP备*******8号</p>
 </div>
 <script type="text/javascript" src="<%=basePath%>/statics/js/register.js"></script>
 </body>

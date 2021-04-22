@@ -23,7 +23,7 @@
 <div id="app" v-cloak>
     <div class="header_con">
         <div class="header">
-            <div class="welcome fl">欢迎来到美多商城!</div>
+            <div class="welcome fl">欢迎来到线上超市!</div>
             <div class="fr">
                 <div class="login_info fl">
                     欢迎您：<em>张 山</em>
@@ -32,6 +32,8 @@
                     <a href="${pageContext.request.contextPath}/index/login.html">登录</a>
                     <span>|</span>
                     <a href="${pageContext.request.contextPath}/index/register.html">注册</a>
+                    <span>|</span>
+                    <a href="${pageContext.request.contextPath}/index/adminlogin.html">管理员登录</a>
                 </div>
                 <div class="user_link fl">
                     <span>|</span>
@@ -46,8 +48,15 @@
     </div>
 
     <div class="search_bar clearfix">
-        <a href="${pageContext.request.contextPath}/index/index.html" class="logo fl"><img src="<%=basePath%>/statics/images/logo.png"></a>
-        <div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;&nbsp;用户中心</div>
+        <div class="sub_page_name fl" >
+            <a href="${pageContext.request.contextPath}/index/index.html">
+                线上超市
+            </a>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <a>
+                用户中心
+            </a>
+        </div>
         <div class="search_con fr mt40">
             <input type="text" class="input_text fl" name="" placeholder="搜索商品">
             <input type="button" class="input_btn fr" name="" value="搜索">
@@ -58,9 +67,9 @@
         <div class="left_menu_con clearfix">
             <h3>用户中心</h3>
             <ul>
-                <li><a href="${pageContext.request.contextPath}/user/user_center.html" class="active">· 个人信息</a></li>
+                <li><a href="${pageContext.request.contextPath}/user/user_center.html">· 个人信息</a></li>
                 <li><a href="${pageContext.request.contextPath}/user/my_bill.html">· 全部订单</a></li>
-                <li><a href="${pageContext.request.contextPath}/user/user_site.html">· 收货地址</a></li>
+                <li><a href="${pageContext.request.contextPath}/user/user_site.html"  class="active">· 收货地址</a></li>
                 <li><a href="${pageContext.request.contextPath}/user/my_pass.html">· 修改密码</a></li>
             </ul>
         </div>
@@ -135,13 +144,6 @@
             <a href="#">关于我们</a>
             <span>|</span>
             <a href="#">联系我们</a>
-            <span>|</span>
-            <a href="#">招聘人才</a>
-            <span>|</span>
-            <a href="#">友情链接</a>
-        </div>
-        <p>CopyRight © 2016 北京美多商业股份有限公司 All Rights Reserved</p>
-        <p>电话：010-****888    京ICP备*******8号</p>
     </div>
 
     <div class="pop_con" v-show="is_show_edit">
@@ -198,6 +200,7 @@
         </div>
         <div class="mask"></div>
     </div>
+</div>
 </div>
 <script type="text/javascript">
     var vm = new Vue({

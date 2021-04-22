@@ -23,6 +23,12 @@ public class IndexController {
         return "login";
     }
 
+    //首页跳登录
+    @RequestMapping(value = "/adminlogin.html")
+    public String index_adminlogin(HttpServletRequest request, HttpServletResponse response){
+        return "adminlogin";
+    }
+
     //首页跳注册
     @RequestMapping(value = "/register.html")
     public String index_register(HttpServletRequest request, HttpServletResponse response){
