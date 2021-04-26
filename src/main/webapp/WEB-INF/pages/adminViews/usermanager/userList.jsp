@@ -67,7 +67,8 @@
                 <th width="10%">年龄</th>
                 <th width="10%">电话</th>
                 <th width="10%">用户类型</th>
-                <th width="30%">操作</th>
+                <th width="10%">状态</th>
+                <th width="20%">操作</th>
             </tr>
             <tr>
                 <td>hanlu</td>
@@ -76,6 +77,7 @@
                 <td>20</td>
                 <td>15918230478</td>
                 <td>经理</td>
+                <td>有效</td>
                 <td>
                     <a href="${pageContext.request.contextPath}/userManager/userView.html"><img src="<%=basePath%>/statics/images/read.png" alt="查看" title="查看"/></a>
                     <a href="${pageContext.request.contextPath}/userManager/userUpdate.html"><img src="<%=basePath%>/statics/images/xiugai.png" alt="修改" title="修改"/></a>
@@ -89,6 +91,7 @@
                 <td>15918230478</td>
                 <td>15918230478</td>
                 <td>2015-11-12</td>
+                <td>有效</td>
                 <td>
                     <a href="${pageContext.request.contextPath}/userManager/userView.html"><img src="<%=basePath%>/statics/images/read.png" alt="查看" title="查看"/></a>
                     <a href="${pageContext.request.contextPath}/userManager/userUpdate.html"><img src="<%=basePath%>/statics/images/xiugai.png" alt="修改" title="修改"/></a>

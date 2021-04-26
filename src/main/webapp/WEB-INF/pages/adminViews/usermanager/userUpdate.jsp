@@ -92,6 +92,11 @@
                     <input type="radio" name="userlei"/>普通用户
 
                 </div>
+                <div>
+                    <label >用户状态：</label>
+                    <input type="radio" name="user_status"/>无效
+                    <input type="radio" name="user_status" checked/>有效
+                </div>
                 <div class="providerAddBtn">
                     <!--<a href="#">保存</a>-->
                     <!--<a href="userList.html">返回</a>-->
